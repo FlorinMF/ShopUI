@@ -1,0 +1,39 @@
+name: VM-PlayerVault
+main: Marcel2508\PlayerVaults
+version: 2.0.0-Beta1
+api: [3.0.0-ALPHA10]
+load: STARTUP
+author: VMPE Development Team
+description: Allows you to use virtual chest inventories
+
+commands:
+ pv:
+  usage: /pv [clear/#vaultNo/help] [#vaultNo (if clear is given)]
+  aliases: ["playervault"]
+  #permission: pv.vault.use
+ pva:
+  usage: /pva <#vaultNo/clear/setlimit> <playername/(#vaultNo/all)/#limit> [playername (if clear is given)]
+  aliases: ["playervaultadmin"]
+  #permission: pv.admin.view
+permissions:
+    pv.vault.use:
+        default: true
+        description: Allows players to use vaults
+    pv.vault.clear:
+        default: true
+        description: Allows players to clear their vaults
+    pv.vault.help:
+        default: true
+        description: Allows players to view playervault help
+    pv.admin.view:
+        default: false
+        description: Allows admins to view players vaults
+    pv.admin.edit:
+        default: false
+        description: Allows admins to edit other players vaults
+    pv.admin.clear:
+        default: false
+        description: Allows admins to clear other players vaults
+    pv.admin.setlimit:
+        default: false
+        description: Allows admins to set vault limit server-wide
